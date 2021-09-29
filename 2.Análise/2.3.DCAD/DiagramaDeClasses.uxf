@@ -89,26 +89,14 @@ itensLista</panel_attributes>
     <coordinates>
       <x>880</x>
       <y>600</y>
-      <w>170</w>
-      <h>50</h>
+      <w>190</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>Receita
 --
-quantidadeDeReceitas</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>420</x>
-      <y>730</y>
-      <w>120</w>
-      <h>60</h>
-    </coordinates>
-    <panel_attributes>Relatório
+
 --
-dataDeEmissão
-listaDeProdutos</panel_attributes>
+calcularNumeroReceitas()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -153,35 +141,35 @@ listaDeProdutos</panel_attributes>
       <h>220</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;90.0;10.0;90.0;200.0;60.0;200.0</additional_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0;90.0;200.0;80.0;200.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>470</x>
-      <y>620</y>
-      <w>90</w>
-      <h>130</h>
-    </coordinates>
-    <panel_attributes>lt=-
-m1=1
-m2=0..*
-Solicita v</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>550</x>
-      <y>270</y>
-      <w>350</w>
-      <h>160</h>
+      <x>460</x>
+      <y>240</y>
+      <w>440</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=0..*
 Gerencia &gt;</panel_attributes>
-    <additional_attributes>10.0;140.0;330.0;10.0</additional_attributes>
+    <additional_attributes>10.0;160.0;10.0;10.0;420.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>550</x>
+      <y>410</y>
+      <w>350</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+Gerencia &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;190.0;10.0;190.0;80.0;330.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -189,27 +177,13 @@ Gerencia &gt;</panel_attributes>
       <x>550</x>
       <y>460</y>
       <w>350</w>
-      <h>60</h>
-    </coordinates>
-    <panel_attributes>lt=-
-m1=1
-m2=1
-Gerencia &gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;330.0;30.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>550</x>
-      <y>490</y>
-      <w>350</w>
-      <h>90</h>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=0..*
 Gerencia &gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;330.0;60.0</additional_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0;90.0;90.0;330.0;90.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -217,13 +191,13 @@ Gerencia &gt;</panel_attributes>
       <x>550</x>
       <y>520</y>
       <w>350</w>
-      <h>110</h>
+      <h>150</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=0..*
 Gerencia &gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;330.0;90.0</additional_attributes>
+    <additional_attributes>10.0;10.0;40.0;10.0;40.0;120.0;330.0;120.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -234,8 +208,8 @@ Gerencia &gt;</panel_attributes>
       <h>130</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=0..n
-m2=1
+m1=0..*
+m2=0..*
 Contém ^</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
   </element>
