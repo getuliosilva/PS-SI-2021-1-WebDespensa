@@ -4,10 +4,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>532</x>
+      <x>497</x>
       <y>630</y>
-      <w>168</w>
-      <h>161</h>
+      <w>203</w>
+      <h>182</h>
     </coordinates>
     <panel_attributes>UsuárioNãoPagante
 --
@@ -23,7 +23,9 @@
 +getSenha() : String
 +setSenha(senha: String) : void
 +getEmail() : String
-+setEmail(email: String) : void</panel_attributes>
++setEmail(email: String) : void
++setValores(valores: String[4]) : void
++getValores() : String[4]</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -46,9 +48,9 @@
     <id>UMLClass</id>
     <coordinates>
       <x>763</x>
-      <y>518</y>
-      <w>168</w>
-      <h>91</h>
+      <y>504</y>
+      <w>189</w>
+      <h>119</h>
     </coordinates>
     <panel_attributes>Produto
 --
@@ -58,7 +60,9 @@
 +getId() : ulong
 +setId(id: ulong) : void
 +getNome() : String
-+setNome(nome: String) : void</panel_attributes>
++setNome(nome: String) : void
++setValores(valores: String[2]) : void
++getValores() : String[2]</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -67,7 +71,7 @@
       <x>973</x>
       <y>630</y>
       <w>252</w>
-      <h>147</h>
+      <h>175</h>
     </coordinates>
     <panel_attributes>ListaDeProdutos
 --
@@ -82,7 +86,9 @@
 +getItens() : ItemListaDeProdutos[0..*]
 +setItens(itens: ItemListaDeProdutos[0..*]) : void
 +addItem(item: ItemListaDeProdutos) : void
-+removerItem(idItem: ulong) : void</panel_attributes>
++removerItem(idItem: ulong) : void
++setValores(valores: String[3]) : void
++getValores() : String[3]</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -125,12 +131,12 @@
     <id>Relation</id>
     <coordinates>
       <x>602</x>
-      <y>784</y>
+      <y>805</y>
       <w>21</w>
-      <h>63</h>
+      <h>42</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -238,7 +244,7 @@ Contém ^</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>301</x>
+      <x>280</x>
       <y>630</y>
       <w>210</w>
       <h>161</h>
@@ -263,24 +269,24 @@ Contém ^</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>385</x>
+      <x>364</x>
       <y>784</y>
-      <w>63</w>
+      <w>84</w>
       <h>105</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=1..*
 Usa ^</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;120.0;70.0;120.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0;100.0;120.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>1001</x>
-      <y>378</y>
+      <y>357</y>
       <w>224</w>
-      <h>196</h>
+      <h>217</h>
     </coordinates>
     <panel_attributes>ItemListaDeProdutos
 --
@@ -300,6 +306,8 @@ Usa ^</panel_attributes>
 +setUnidade(unidade: String) : void
 +getValidade() : DateTime
 +setValidade(validade: DateTime) : void
++setValores(valores: String[5]) : void
++getValores() : String[5]
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -309,13 +317,13 @@ Usa ^</panel_attributes>
       <x>840</x>
       <y>441</y>
       <w>175</w>
-      <h>91</h>
+      <h>77</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=1..*
 Contém v</panel_attributes>
-    <additional_attributes>10.0;110.0;10.0;10.0;230.0;10.0</additional_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0;230.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -323,12 +331,13 @@ Contém v</panel_attributes>
       <x>455</x>
       <y>182</y>
       <w>231</w>
-      <h>63</h>
+      <h>70</h>
     </coordinates>
     <panel_attributes>ControleDeProduto
 --
 --
 +criarProduto(nome: String) : void
++obterProduto(id: ulong) : void
 +editarProduto(id: ulong, nome: String) : void
 +excluirProduto(id:ulong) : void</panel_attributes>
     <additional_attributes/>
@@ -339,12 +348,13 @@ Contém v</panel_attributes>
       <x>441</x>
       <y>105</y>
       <w>266</w>
-      <h>63</h>
+      <h>70</h>
     </coordinates>
     <panel_attributes>ControleDeUsuário
 --
 --
 +criarUsuário(valores: String[4..*]) : void
++obterUsuário(id: ulong) : void
 +editarUsuário(id: ulong, valores: String[4..*]) : void
 +excluirUsuário(id:ulong) : void</panel_attributes>
     <additional_attributes/>
@@ -352,29 +362,15 @@ Contém v</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>882</x>
-      <y>119</y>
-      <w>196</w>
-      <h>35</h>
-    </coordinates>
-    <panel_attributes>VisualizaçãoDeUsuário
---
---
-+obterUsuário(id: ulong) : String[1..*]</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>882</x>
+      <x>798</x>
       <y>189</y>
-      <w>196</w>
+      <w>280</w>
       <h>35</h>
     </coordinates>
-    <panel_attributes>VisualizaçãoDeProduto
+    <panel_attributes>ControleDeVisualização
 --
 --
-+obterProduto(id: ulong) : String[1..*]</panel_attributes>
++atualizaView(view: String, valores: String[1..*]) : void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -398,12 +394,13 @@ Contém v</panel_attributes>
       <x>413</x>
       <y>259</y>
       <w>308</w>
-      <h>63</h>
+      <h>70</h>
     </coordinates>
     <panel_attributes>ControleDeListaDeProdutos
 --
 --
 +criarListaDeProdutos(valores: String[2..*]) : void
++obterListaDeProdutos(id: ulong) : void
 +editarListaDeProdutos(id: ulong, valores: String[2..*]) : void
 +excluirListaDeProdutos(id:ulong) : void</panel_attributes>
     <additional_attributes/>
@@ -411,27 +408,14 @@ Contém v</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>868</x>
-      <y>259</y>
-      <w>231</w>
-      <h>35</h>
-    </coordinates>
-    <panel_attributes>VisualizaçãoDeListaProduto
---
---
-+obterListaDeProduto(id: ulong) : String[1..*]</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
       <x>994</x>
-      <y>833</y>
+      <y>861</y>
       <w>217</w>
-      <h>35</h>
+      <h>49</h>
     </coordinates>
     <panel_attributes>Relatório
 --
+-dados: String[1..*]
 --
 +emitirRelatório(filtros: String[0..*]) : void</panel_attributes>
     <additional_attributes/>
@@ -440,7 +424,7 @@ Contém v</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1092</x>
-      <y>770</y>
+      <y>798</y>
       <w>70</w>
       <h>77</h>
     </coordinates>
@@ -471,14 +455,16 @@ Contém ^</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>301</x>
-      <y>378</y>
+      <y>350</y>
       <w>259</w>
-      <h>35</h>
+      <h>63</h>
     </coordinates>
     <panel_attributes>Autenticação
 --
+-statusSessao: boolean
 --
-+autenticar(nome: String, senha: String): boolean</panel_attributes>
++autenticar(nome: String, senha: String): boolean
++logoff(): void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -565,26 +551,6 @@ m2=1..*</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>973</x>
-      <y>56</y>
-      <w>203</w>
-      <h>91</h>
-    </coordinates>
-    <panel_attributes>lt=-
-m1=1
-
-&lt; Responde
-
-
-
-
-
-m2=1..*</panel_attributes>
-    <additional_attributes>10.0;20.0;190.0;20.0;190.0;100.0;150.0;100.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>973</x>
       <y>42</y>
       <w>280</w>
       <h>175</h>
@@ -604,21 +570,34 @@ m2=1..*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>973</x>
-      <y>21</y>
-      <w>357</w>
-      <h>266</h>
+      <x>700</x>
+      <y>119</y>
+      <w>119</w>
+      <h>84</h>
     </coordinates>
-    <panel_attributes>lt=-
-m1=1
-
-Responde ^
-
-
-
-
-
-m2=1..*</panel_attributes>
-    <additional_attributes>10.0;10.0;410.0;10.0;410.0;350.0;180.0;350.0</additional_attributes>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;150.0;20.0;150.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>679</x>
+      <y>196</y>
+      <w>133</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>714</x>
+      <y>217</y>
+      <w>105</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;110.0;130.0;110.0;130.0;10.0</additional_attributes>
   </element>
 </diagram>
